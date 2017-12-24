@@ -1,0 +1,24 @@
+//切片不存储数据，它只描述了底层数组的一段
+//更改切片的元素会修改底层数组对应的元素
+//与当前切片共享底层数组的切片都会观测到当前的更改
+package main
+
+import "fmt"
+
+func main() {
+	names := [4]string{
+		"lee",
+		"nancy",
+		"kevin",
+		"john",
+	}
+	fmt.Println(names)
+
+	a := names[0:2]
+	b := names[1:3]
+	fmt.Println(a, b)
+
+	b[1] = "hehe"
+	fmt.Println(a, b)
+	fmt.Println(names)
+}
