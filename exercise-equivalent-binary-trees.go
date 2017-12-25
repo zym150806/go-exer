@@ -16,19 +16,33 @@
 //Same(tree.New(1), tree.New(1)) 应当返回 true ，而 Same(tree.New(1), tree.New(2)) 应当返回 false 。
 package main
 
-import "golang.org/x/tour/tree"
+import (
+	"golang.org/x/tour/tree"
+	"fmt"
+)
 
 // Walk 步进 tree t 将所有的值从 tree 发送到 channel ch。
-func Walker(t *tree.Tree, ch chan int) {
-
+func Walk(t *tree.Tree, ch chan int) {
+	//for _, val := range t {
+	//	fmt.Println(val)
+	//}
 }
 
 // Same 检测树 t1 和 t2 是否含有相同的值。
 func Same(t1, t2 *tree.Tree) bool {
+	//ch1 := make(chan int)
+	//ch2 := make(chan int)
+	//
+	//Walk(t1, ch1)
+	//Walk(t2, ch2)
 
+	return true
 }
 
 func main() {
-
+	//fmt.Println(Same(tree.New(1), tree.New(1)))
+	//fmt.Println(Same(tree.New(1), tree.New(2)))
+	fmt.Println(tree.New(1))
+	fmt.Println(tree.New(2))
 }
 
